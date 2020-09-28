@@ -1,22 +1,27 @@
-fun main(args: Array<String>) {
-    println("Введите длинну первой стороны бассейна")
+fun main() {
+    println("Enter the length of the first side of the pool")
     val n: String? = readLine()
-    println("Введите длинну второй стороны бассейна")
+    println("Enter the length of the second side of the pool")
     val m = readLine()
-    println("Введите расстояние до длинной стороны бассейна")
+    println("Enter the distance to the long side of the pool")
     val x = readLine()
-    println("Введите расстояние до короткой22 стороны бассейна")
+    println("Enter the distance to the short side of the pool")
     val y = readLine()
     if (n != null) {
         if (m != null) {
             if (x != null) {
                 if (y != null) {
-                    println("Минимально растояние до бортика: " + compare(n.toInt(), m.toInt(), x.toInt(), y.toInt()))
+                    println("Minimum distance to side: " + compare(
+                        n.toInt(),
+                        m.toInt(),
+                        x.toInt(),
+                        y.toInt()
+                    )
+                    )
                 }
             }
         }
     }
-    fun compare(n: Int, m: Int, x: Int, y: Int) {}
 }
 
 fun compare(n: Int, m: Int, x: Int, y: Int): Int {
@@ -24,11 +29,11 @@ fun compare(n: Int, m: Int, x: Int, y: Int): Int {
         return if (m - y < x)
             m - y
         else x
-    if (n > m)
-        return if (m - x < y)
+    return if (n > m)
+        if (m - x < y)
             m - x
         else
             y
     else
-        return 0
+        0
 }
