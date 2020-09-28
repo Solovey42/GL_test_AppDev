@@ -18,3 +18,17 @@ fun main(args: Array<String>) {
     }
     fun compare(n: Int, m: Int, x: Int, y: Int) {}
 }
+
+fun compare(n: Int, m: Int, x: Int, y: Int): Int {
+    if (n < m)
+        return if (m - y < x)
+            m - y
+        else x
+    if (n > m)
+        return if (m - x < y)
+            m - x
+        else
+            y
+    else
+        return 0
+}
