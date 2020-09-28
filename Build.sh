@@ -1,1 +1,1 @@
-kotlinc src/task1.kt -include-runtime -d Builds/task1.jar & kotlinc src/task2.kt -include-runtime -d Builds/task2.jar & kotlinc src/task3.kt -include-runtime -d Builds/task3.jar
+kotlinc src/task1.kt -include-runtime -d task1.jar & kotlinc src/task2.kt -include-runtime -d task2.jar & kotlinc src/task3.kt -include-runtime -d task3.jar

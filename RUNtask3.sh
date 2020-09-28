@@ -1,1 +1,1 @@
-java -jar Builds/task3.jar
+java -jar task3.jar
